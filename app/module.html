@@ -15,6 +15,13 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+<style>
+  form { margin: 20px 0;}
+  legend { color: rgb(152, 45, 145);}
+</style>
+
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -25,8 +32,8 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="index.htlm">Original Module form</a></li>
-          <li><a href="module.html">Module Prototype</a></li>
+          <li class="active"><a href="index.html">Original Module form</a></li>
+          <li><a href="module.html">Module prototype</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">SFU POC ContentAdmin</h3>
@@ -34,13 +41,109 @@
 
       <div class="row marketing">
         <div class="col-lg-12">
-          <h4>POC for Content Admin</h4>
+          <h4>Module Concept 2 <small>Single page wizard, with emphasis on Module creation</small></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form">
+             <fieldset>
+
+            <!-- Form Name -->
+            <legend>Learning Paths</legend>
+              <div class="col-lg-6">
+                  <!-- Single button -->
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Select a Learning Path <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Learning Path One</a></li>
+                        <li><a href="#">Learning Path Two</a></li>
+                        <li><a href="#">Learning Path Three</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Create New ...</a></li>
+                      </ul>
+                    </div>
+              </div>
+              <div class="col-lg-6 hide">
+                  <!-- Text input-->
+                    <div class="form-group">
+                      <label class="control-label" for="textinput">Title</label>  
+                      <div class="">
+                      <input id="textinput" name="textinput" type="text" placeholder="Title" class="form-control input-md">
+                        
+                      </div>
+                    </div>
+
+                    <!-- Textarea -->
+                    <div class="form-group">
+                      <label class="control-label" for="textarea">Description</label>
+                      <div class="">                     
+                        <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                      </div>
+                    </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form">
+             <fieldset>
+
+            <!-- Form Name -->
+            <legend>Courses</legend>
+                <div class="col-lg-6">
+                    <!-- Single button -->
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                          Select a Course <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Course One</a></li>
+                          <li><a href="#">Course Two</a></li>
+                          <li><a href="#">Course Three</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Create New ...</a></li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-lg-6 hide">
+                    <!-- Text input-->
+                      <div class="form-group">
+                        <label class="control-label" for="textinput">Title</label>  
+                        <div class="">
+                        <input id="textinput" name="textinput" type="text" placeholder="Title" class="form-control input-md">
+                          
+                        </div>
+                      </div>
+
+                      <!-- Textarea -->
+                      <div class="form-group">
+                        <label class="control-label" for="textarea">Description</label>
+                        <div class="">                     
+                          <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                        </div>
+                      </div>
+                </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+
            <form class="form">
             <fieldset>
 
             <!-- Form Name -->
             <legend>New Module</legend>
-<div class="col-lg-8">
+          
+
+
+          <div class="col-lg-8">
             <!-- Text input-->
             <div class="form-group">
               <label class="control-label" for="textinput">Title</label>  
@@ -57,8 +160,8 @@
                 <textarea class="form-control" id="textarea" name="textarea"></textarea>
               </div>
             </div>
-</div>
-<div class="col-lg-4">
+          </div>
+          <div class="col-lg-4">
   
 
 
@@ -109,7 +212,7 @@
             </div>
 
             <!-- Select Multiple -->
-            <div class="form-group">
+            <div class="form-group hide">
               <label class="control-label" for="selectmultiple">Learning Paths</label>
               <div class="">
                 <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
@@ -121,7 +224,7 @@
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
+            <div class="form-group hide">
               <label class="control-label" for="selectbasic">Parent Course</label>
               <div class="">
                 <select id="selectbasic" name="selectbasic" class="form-control">
